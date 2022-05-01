@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Exercise 11</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="2" style="text-align: center;">Login Form</td>
+        </tr>
+        <tr>
+            <td>Enter Username </td>
+            <td><input type="text" name="username" id="username"></td>
+        </tr>
+        <tr>
+            <td>Enter Password </td>
+            <td><input type="password" name="pass" id="pass"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="login" name="login" onclick="validateUser()">Login</button></td>
+        </tr>
+    </table>
+    <p>Note: username = admin/Admin/ADMIN, password=admin123</p>
+</body>
+<script>
+    function validateUser(){
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("pass").value;
+        var message;
+        if (username == "Admin" || username == "ADMIN" || username == "admin" && password == "admin123"){
+              message = 'Login Successful...';
+        }
+        else{
+            message = 'Invalid Credentials.';
+        }
+        alert(message);
+        return;
+    }
+</script>
+
+</html>

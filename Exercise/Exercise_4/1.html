@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Exercise 1</title>
+    </head>
+<body style="background-color:rgb(247, 219, 218);">
+    <table>
+        <tr>
+            <td>Enter 1st Number :</td>
+            <td><input type="text" name="num1" id="num1"></td>
+        </tr>
+        <tr>
+            <td>Enter 2nd Number :</td>
+            <td><input type="text" name="num2" id="num2"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button type="button" onclick="addition()">Sum</button>
+                <button type="button" onclick="subtraction()">Sub</button>
+                <button type="button" onclick="multiplication()">Mul</button>
+                <button type="button" onclick="division()">Div</button>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td colspan="2" align="center" id="result">Output : </td>
+        </tr>
+    </table>
+    
+    <script>
+        function addition(){
+            var a =  document.getElementById("num1").value;
+            var b =  document.getElementById("num2").value;
+            var c = parseInt(a) + parseInt(b); 
+
+            document.getElementById("result").innerHTML="Output : " + c;
+        }
+        function subtraction(){
+            var a =  document.getElementById("num1").value;
+            var b =  document.getElementById("num2").value;
+            var c = parseInt(a) - parseInt(b); 
+
+            document.getElementById("result").innerHTML="Output : " + c;
+        }
+        function multiplication(){
+            var a =  document.getElementById("num1").value;
+            var b =  document.getElementById("num2").value;
+            var c = parseInt(a) * parseInt(b); 
+
+            document.getElementById("result").innerHTML="Output : " + c;
+        }
+        function division(){
+            var a =  document.getElementById("num1").value;
+            var b =  document.getElementById("num2").value;
+            var c = parseInt(a) / parseInt(b); 
+
+            document.getElementById("result").innerHTML="Output : " + c;
+        }
+    </script>
+
+</body>
+</html>

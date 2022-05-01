@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title></title>
+    <style>
+        tr, td{
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="info">
+        <tr>
+            <td><b>College Name</b></td>
+            <td><b>DOE</b></td>
+        </tr>
+    </table>
+</body>
+<script>
+    let obj = new XMLHttpRequest();
+    obj.open("GET", "sample2.json");
+    obj.send();
+    obj.onload = function () {
+        let response = JSON.parse(obj.responseText);
+        var table = document.getElementById("info");
+
+        for (i = 0; i < response.length; i++) {
+            var row = table.insertRow(i+1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = response[i].name;
+            cell2.innerHTML = response[i].doe;
+        }
+    };
+</script>
+
+</html>

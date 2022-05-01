@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Exercise 9</title>
+    </head>
+    <body>
+        Enter Number : 
+        <input type="text" id="num" name="num">
+        <br>
+        <button id="submit" name="submit" onclick="checkDay()">Submit</button>
+        <br>
+        <p id="result"></p>
+        <script>
+            function checkDay(){
+                var day = parseInt(document.getElementById("num").value);
+                switch(day){
+                    case 1 : document.getElementById("result").innerHTML = "Day is Monday";
+                             break;
+                    case 2 : document.getElementById("result").innerHTML = "Day is Tueday";
+                             break;
+                    case 3 : document.getElementById("result").innerHTML = "Day is Wdnesday";
+                             break;
+                    case 4 : document.getElementById("result").innerHTML = "Day is Thursday";
+                             break;
+                    case 5 : document.getElementById("result").innerHTML = "Day is Friday";
+                             break;
+                    case 6 : document.getElementById("result").innerHTML = "Day is Satday";
+                             break;
+                    case 7 : document.getElementById("result").innerHTML = "Day is Sunday";
+                             break;
+                    default : document.getElementById("result").innerHTML = "Invalid Day..!";
+                             break;
+                }
+            }
+        </script>
+    </body>
+</html>

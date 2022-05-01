@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: #007bff;
+            background: linear-gradient(to right, #0062E6, #33AEFF);
+            font-family: cursive;
+        }
+    </style>
+</head>
+<script>
+    function postData() {
+        var elements = document.getElementsByClassName("form-control");
+        var formData = new FormData();
+
+        for (var i = 0; i < elements.length - 1; i++) {
+            formData.append(elements[i].name, elements[i].value);
+            localStorage.setItem(elements[i].name, elements[i].value);
+        }
+
+        var xmlHttp = new XMLHttpRequest();
+
+        xmlHttp.onreadystatechange = function () {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                alert(xmlHttp.responseText);
+            }
+        }
+
+        xmlHttp.open("POST", "request.html", true);
+        xmlHttp.send(formData);
+    }
+</script>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-xl-7 mx-auto">
+                <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+
+                    <div class="card-body p-4 p-sm-5">
+                        <h1 class="card-title text-center mb-5 fw-bold fs-3">Register</h1>
+                        <form action="request.html" id="register_form" method="post">
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name" name="firstname"
+                                    placeholder="myusername" required autofocus>
+                                <label for="name">Enter First Name</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="lastName" name="lastname"
+                                    placeholder="myusername" required autofocus>
+                                <label for="lastName">Enter Last Name</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="name@example.com">
+                                <label for="email">Enter Email address</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="tel" class="form-control" id="mobileNo" name="mobileNo"
+                                    placeholder="1234567890">
+                                <label for="mobileNo">Enter Mobile No</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="password" name="pwd"
+                                    placeholder="Password">
+                                <label for="password">Enter Password</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="passwordConfirm"
+                                    placeholder="Confirm Password">
+                                <label for="passwordConfirm">Confirm Password</label>
+                            </div>
+
+                            <div class="d-grid mb-2">
+                                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" id="submit"
+                                    type="submit" onclick="postData()">Submit</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

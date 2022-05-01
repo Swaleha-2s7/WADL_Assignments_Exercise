@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Exercise 6</title>
+</head>
+
+<body style="background-color:rgb(247, 219, 218);">
+    <table>
+        <tr>
+            <td>Enter 1st Number </td>
+            <td><input type="text" id="age" name="age"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="ans" name="ans" onclick="checkButton()">Check</button></td>
+        </tr>
+        <tr>
+            <td colspan="2" id="result"></td>
+        </tr>
+    </table>
+    <script>
+        function checkButton() {
+            var ag = parseInt(document.getElementById("age").value);
+
+            if(ag < 18) {
+                document.getElementById("result").innerHTML = "Your Age is less than 18.";
+            }
+            else if(ag == 18) {
+                document.getElementById("result").innerHTML = "Your Age is 18.";
+            }
+            else{
+                document.getElementById("result").innerHTML = "Your Age is greater than 18."
+            } 
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Exercise 4</title>
+</head>
+
+<body style="background-color:rgb(247, 219, 218);">
+    <h1>Arithmatic Calculator</h1>
+    <br>
+    <input type="text" id="num1" name="num1" size="5">
+    <select id="operation">
+        <option value="sum">+</option>
+        <option value="sub">-</option>
+        <option value="mul">*</option>
+        <option value="div">/</option>
+    </select>
+    <input type="text" id="num2" name="num2" size="5"> = <input type="text" id="result" name="result" size="8">
+    <button name="ans" id="ans" onclick="checkButton()">Answer</button>
+    <script>
+        function checkButton() {
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+
+            if (document.getElementById('operation').value == 'sum') {
+                var c = parseInt(a) + parseInt(b);
+                document.getElementById("result").value = c;
+            }
+            else if (document.getElementById('operation').value == 'sub') {
+                var c = parseInt(a) - parseInt(b);
+                document.getElementById("result").value = c;
+            }
+            else if (document.getElementById('operation').value == 'mul') {
+                var c = parseInt(a) * parseInt(b);
+                document.getElementById("result").value = c;
+            }
+            else if (document.getElementById('operation').value == 'div') {
+                var c = parseInt(a) / parseInt(b);
+                document.getElementById("result").value = c;
+            }
+            else {
+                document.getElementById("result").value
+                    = "You have not selected any operation";
+            }
+        }   
+    </script>
+
+</body>
+
+</html>

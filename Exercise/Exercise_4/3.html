@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Exercise 3</title>
+    </head>
+<body style="background-color:rgb(247, 219, 218);">
+    <table>
+        <tr>
+            <td>Enter 1st Number :</td>
+            <td><input type="text" name="num1" id="num1" ></td>
+        </tr>
+        <tr>
+            <td>Enter 2nd Number :</td>
+            <td><input type="text" name="num2" id="num2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <select id="operation" onchange="checkButton()" style="width: 100%;">
+                    <option>Select</option>
+                    <option value="sum">Sum</option>
+                    <option value="sub">Sub</option>
+                    <option value="mul">Mul</option>
+                    <option value="div">Div</option>
+                </select>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td colspan="2" align="center" id="result">Output : </td>
+        </tr>
+    </table>
+    
+    <script>
+        function checkButton() {
+            var a =  document.getElementById("num1").value;
+            var b =  document.getElementById("num2").value;
+
+            if(document.getElementById('operation').value == 'sum') {   
+                var c = parseInt(a) + parseInt(b); 
+                document.getElementById("result").innerHTML="Output : " + c;
+            }   
+            else if(document.getElementById('operation').value == 'sub') {   
+                var c = parseInt(a) - parseInt(b); 
+                document.getElementById("result").innerHTML="Output : " + c;
+            }   
+            else if(document.getElementById('operation').value == 'mul') {   
+                var c = parseInt(a) * parseInt(b); 
+                document.getElementById("result").innerHTML="Output : " + c;    
+            }   
+            else if(document.getElementById('operation').value == 'div') {   
+                var c = parseInt(a) / parseInt(b); 
+                document.getElementById("result").innerHTML="Output : " + c;  
+            }  
+            else {   
+                document.getElementById("result").innerHTML   
+                    = "You have not selected any operation";   
+            }   
+        }   
+    </script>
+
+</body>
+</html>

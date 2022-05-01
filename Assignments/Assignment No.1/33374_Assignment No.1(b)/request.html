@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        crossorigin="anonymous"></script>
+</head>
+<script>
+    function loadData() {
+        let name = sessionStorage.getItem('firstname');
+        console.log('firstname : ', name);
+        document.getElementById('result').innerHTML('<b>' + name + '</b>');
+    }
+
+
+</script>
+
+<body onload="loadData()">
+    <p id="result"></p>
+</body>
+
+</html>

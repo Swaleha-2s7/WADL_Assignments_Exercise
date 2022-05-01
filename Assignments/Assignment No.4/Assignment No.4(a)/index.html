@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title>JQuery Mobile</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- Start of first page: #one -->
+    <div data-role="page" id="one">
+
+        <div data-role="header" data-theme="b">
+            <h1>Sample Website</h1>
+            <a href="#two"
+                class="ui-btn ui-icon-arrow-r ui-btn-icon-left ui-btn-right ui-btn-icon-notext ui-corner-all">next</a>
+
+            <a href="#one" title="Back"
+                class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-left ui-btn-icon-notext ui-corner-all">back</a>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <h1>Welcome to the Webiste</h1>
+            <p>
+                Create an account for free or if you have already have an account just login and enjoy the facilities.
+            </p>
+            <h3>Are you a New User?</h3>
+            <p><a href="#two" class="ui-btn ui-shadow ui-corner-all">Regiter</a></p>
+            <h3>Already Have an Account</h3>
+            <p><a href="#popup" class="ui-btn ui-shadow ui-corner-all"  data-transition="pop">Login</a>
+            </p>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-theme="a">
+            <h4>Copyright @ Webiste 2022</h4>
+        </div><!-- /footer -->
+    </div><!-- /page one -->
+
+    <!-- Start of second page: #two -->
+    <div data-role="page" id="two" data-theme="a">
+
+        <div data-role="header" data-theme="b">
+            <h1>Register</h1>
+            <a href="#two"
+                class="ui-btn ui-icon-arrow-r ui-btn-icon-left ui-btn-right ui-btn-icon-notext ui-corner-all">next</a>
+
+            <a href="#one" title="Back"
+                class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-left ui-btn-icon-notext ui-corner-all">back</a>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <input type="text" placeholder="Enter First Name">
+            <br>
+            <input type="text" placeholder="Enter Last Name">
+            <br>
+            <input type="email" placeholder="Enter Email">
+            <br>
+            <input type="password" placeholder="Enter Password">
+            <br>
+            <input type="password" placeholder="Re-Enter Password">
+            <br>
+            <a href="#" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Register</a>
+
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4>Copyright @ Webiste 2022</h4>
+        </div><!-- /footer -->
+    </div><!-- /page two -->
+
+    <!-- Start of third page: #popup -->
+    <div data-role="page" id="popup" data-dialog="true">
+
+        <div data-role="header" data-theme="b">
+            <h1>Login</h1>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <input type="text" placeholder="Enter Username">
+            <br>
+            <input type="password" placeholder="Enter Password">
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <a href="#" class="ui-btn">Login</a>
+        </div><!-- /footer -->
+    </div><!-- /page popup -->
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Exercise 8</title>
+    </head>
+    <body>
+        Select Country to find its Capital
+        <br><br>
+        <select id="country" name="country" onchange="selectCapital()">
+            <option>Select Country</option>
+            <option value="India">India</option>
+            <option value="US">US</option>
+            <option value="UK">UK</option>
+        </select>
+        <select id="capital" name="capital">
+            <option>Select City</option>
+        </select>
+    </body>
+    <script>
+        function selectCapital(){
+            var country = document.getElementById("country").value;
+            var cities;
+            if (country == "India"){
+                cities = ["Mumbai", "New Delhi", "Chandigarh", "Panaji"];
+            }
+            else if (country == "US"){
+                cities = ["New York", "Washigton D.C", "Los Angeles", "San Francisco"];
+            }
+            else{
+                cities = ["London", "Manchester", "Glasgow", "Birmingham"];
+            }
+            var str = "";
+            for (var city of cities){
+                str += "<option>" + city +"</option>";
+            }
+            document.getElementById("capital").innerHTML = str;
+        }
+    </script>
+</html>

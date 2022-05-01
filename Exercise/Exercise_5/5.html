@@ -1,0 +1,19 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p id="output"></p>
+</body>
+<script>
+    let obj = new XMLHttpRequest();
+    obj.open("GET", "document.txt");
+    obj.send();
+    obj.onload = function () {
+        document.getElementById("output").innerHTML = obj.responseText;
+    };
+</script>
+
+</html>

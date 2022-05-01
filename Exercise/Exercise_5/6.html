@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        <button id = "getRes" onclick="displayRes()">Get Data</button>
+        <br>
+        <p id = "result"></p>
+    </body>
+    <script>
+        let obj  = new XMLHttpRequest();
+        let res;
+        obj.open("GET", "sample.txt");
+        obj.send();
+        obj.onload = function(){
+            res = obj.responseText;
+        }
+        function displayRes(){
+            document.getElementById("result").innerHTML = "Return Data --> " + res;
+        }
+        
+    </script>
+</html>

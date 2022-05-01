@@ -1,0 +1,92 @@
+<html>
+    <title>Exercise_3 - 1</title>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .header {
+            float: left;
+            color: black;
+            font-size: 30px;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .left {
+            width: 25%;
+        }
+
+        .right {
+            width: 75%;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .menubar {
+            background-color: yellow;
+            width: 100%;
+            padding: 15px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .section {
+            float: left;
+            width: 33.33%;
+            padding: 25px;
+            text-align: center;
+            height: 80px;
+        }
+        .footer{
+            background-color: skyblue;
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+        }
+        .content{
+            float: left;
+            color: black;
+            font-size: 30px;
+            text-align: center;
+            padding: 15px;
+        }
+        .l{
+            width: 75%;
+            height: 300px;            
+        }
+        .r{
+            width: 25%;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="header left" style="background-color: red;">LOGO</div>
+        <div class="header right" style="background-color: green;">Website Heading</div>
+    </div>
+    <div class="menubar">MENU</div>
+    <div class="row">
+        <div class="section" style="background-color:blue">Section 1</div>
+        <div class="section" style="background-color:gray">Section 2</div>
+        <div class="section" style="background-color:rgb(212, 99, 212)">Section 3</div>
+    </div>
+    <div class="row">
+        <div class="content l" style="background-color:rgb(64, 224, 184) ;">Page Content</div>
+        <div class="content r" style="background-color:rgb(233, 162, 70)">Side Bar</div>
+    </div>
+    <div class="footer">Page Footer</div>
+</body>
+
+</html>

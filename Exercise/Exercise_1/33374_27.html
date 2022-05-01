@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <style>
+        .info {
+            float: left;
+        }
+        p{
+            width: 200px;
+        }
+
+        .facebook::after {
+            float: right;
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        form {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercise 1 : Facebook</h1>
+    <div class="facebook">
+        <div class="info">
+            <img src="facebook.jpg" height="100px" width="100px" alt="Facebook">
+            <p>
+                Facebook, Inc. is an American online social media and social networking service company. It is based in
+                Menlo Park, California.
+            </p>
+            <a href="#">For more click here</a>
+        </div>
+        <form>
+            <label>Name :</label>
+            <input type="text" value="Enter your name"><br>
+            <br>
+            <label>Age :</label>
+            <input type="text"><br>
+            <br>
+            <label>Gender</label>
+            <input type="radio" checked><label>Male</label>
+            <input type="radio"><label>Female</label><br>
+            <br><br>
+            <button>Sign up</button>
+        </form>
+    </div>
+</body>
+
+</html>

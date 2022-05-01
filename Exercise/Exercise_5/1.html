@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>AJAX Assignment</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let obj = new XMLHttpRequest();
+    obj.open("GET", "sample.txt");
+    obj.send();
+    obj.onload = function () {
+        alert(obj.responseText);
+    };
+</script>
+
+</html>

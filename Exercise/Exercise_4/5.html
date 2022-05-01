@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Exercise 5</title>
+</head>
+
+<body style="background-color:rgb(247, 219, 218);">
+    <table>
+        <tr>
+            <td>Enter 1st Number </td>
+            <td><input type="text" id="num1" name="num1"></td>
+        </tr>
+        <tr>
+            <td>Enter 1st Number </td>
+            <td><input type="text" id="num2" name="num2"></td>
+        </tr>
+        <tr>
+            <td>Enter 1st Number </td>
+            <td><input type="text" id="num3" name="num3"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="ans" name="ans" onclick="checkButton()">Greater</button></td>
+        </tr>
+        <tr>
+            <td colspan="2" id="result"></td>
+        </tr>
+    </table>
+    <script>
+        function checkButton() {
+            var a = parseInt(document.getElementById("num1").value);
+            var b = parseInt(document.getElementById("num2").value);
+            var c = parseInt(document.getElementById("num3").value);
+
+            if(a > b && a > c) {
+                document.getElementById("result").innerHTML = a + " is Greater.";
+            }
+            else if(b > a && b > c) {
+                document.getElementById("result").innerHTML = b + " is Greater.";
+            }
+            else{
+                document.getElementById("result").innerHTML = c + " is Greater."
+            } 
+        }
+    </script>
+
+</body>
+
+</html>

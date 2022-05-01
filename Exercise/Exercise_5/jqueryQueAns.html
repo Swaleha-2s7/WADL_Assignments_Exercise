@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>GK QueAns</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        p {
+            width: 500px;
+        }
+
+        .Que {
+            border: 1px black solid;
+            padding: 5px;
+            width: 500px;
+            background-color: antiquewhite;
+            color: black;
+            margin: 10px;
+        }
+
+        .queContainer {
+            padding: 3px;
+            margin: 3px;
+        }
+
+        .ans {
+            margin: 10px;
+        }
+
+        .symbol {
+            float: right;
+            padding-right: 20px;
+        }
+        .container{
+            border: 1px solid black;
+            background-color: bisque;
+            margin-left: 400px;
+            width: 550px;
+            align-items: center;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".ans").hide();
+            $(".Que").click(function () {
+                $(this).siblings().toggle();
+                var symbol = $(this).find("b");
+                checkSymbol(symbol);
+            });
+        });
+
+        function checkSymbol(symbol) {
+            var text = $(symbol).text();
+            if (text == "+") {
+                text = text.replace("+", "-");
+            } else {
+                text = text.replace("-", "+");
+            }
+            $(symbol).text(text);
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="margin-left: 420px;">General Knowledge Que and Ans</h1>
+    <div class="container">
+        <div class="queContainer">
+            <div class="Que" id="que1">
+                <p>Que. 1 Who is the first Prime Minister of India ? <b class="symbol">+</b></p>
+            </div>
+            <p id="ans1" class="ans">Ans --> Pandit Jawaharlal Neharu</p>
+        </div>
+
+        <div class="queContainer">
+            <div class="Que" id="que2">
+                <p>Que. 2 What is the capital of India ?<b class="symbol">+</b></p>
+            </div>
+            <p id="ans2" class="ans">Ans --> Delhi</p>
+        </div>
+
+        <div class="queContainer">
+            <div class="Que" id="que3">
+                <p>Que. 3 What is the finance capital of India ?<b class="symbol">+</b></p>
+            </div>
+            <p id="ans3" class="ans">Ans --> Mumbai</p>
+        </div>
+
+        <div class="queContainer">
+            <div class="Que" id="que4">
+                <p>Que. 4 Who is the National bird of India ?<b class="symbol">+</b></p>
+            </div>
+            <p id="ans4" class="ans">Ans --> Peacock</p>
+        </div>
+
+        <div class="queContainer">
+            <div class="Que" id="que5">
+                <p>Que. 5 Who is the National animal of India ?<b class="symbol">+</b></p>
+            </div>
+            <p id="ans5" class="ans">Ans --> Tiger</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

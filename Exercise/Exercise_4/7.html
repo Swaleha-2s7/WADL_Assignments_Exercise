@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Exercise 7</title>
+    </head>
+    <style>
+        tr, td{
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+    <body>
+        <p>Calculate Discount</p>
+        <table style="border: 1px solid black;border-collapse: collapse;">
+            <tr>
+                <td>Enter Shopping Amount </td>
+                <td><input type="text" name="amount" id="amount"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="calculate" name="calculate" onclick="calculateDiscount()">Calculate Discount</button></td>
+            </tr>
+            <tr>
+                <td>Total Amount</td>
+                <td id="result" name="result"></td>
+            </tr>
+        </table>
+        <script>
+            function calculateDiscount(){
+                var amount = parseInt(document.getElementById("amount").value);
+                var discount = 0;
+                var finalAmount = 0;
+                if (amount > 1000){
+                    discount = (amount * 10)/100;
+                    finalAmount = amount - discount;
+                }
+                else{
+                    discount = (amount * 5)/100;
+                    finalAmount = amount - discount;
+                }
+                document.getElementById("result").innerHTML = finalAmount;
+            }
+        </script>
+    </body>
+</html>

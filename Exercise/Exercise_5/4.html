@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    Select Name : <select id="Collage">
+        <option>Select Option</option>
+        <option id = "opt1" value = "PICT">PICT</option>
+        <option id = "opt2" value = "COEP">COEP</option>
+        <option id = "opt3" value = "IITK">IITK</option>
+        <option id = "opt4" value = "IITB">IITB</option>
+    </select>
+    <button id = "result" onclick="display()">Check Result</button>
+    <br>
+    <p id = "output"></p>
+
+</body>
+<script>
+    let obj = new XMLHttpRequest();
+    let res;
+    obj.open("GET", "sample2.json");
+    obj.send();
+    obj.onload = function () {
+        res = JSON.parse(obj.responseText);
+    };
+    function display(){
+        var clg = document.getElementById("Collage").value;
+        for (i = 0; i < res.length; i++){
+            if (clg == res[i].name){
+                document.getElementById("output").innerHTML = "Year of Establishment : " + res[i].doe;
+            }
+        }
+    }
+</script>
+
+</html>

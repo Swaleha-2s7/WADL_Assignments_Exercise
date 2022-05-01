@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <p id="abc"></p>
+</body>
+<script>
+    let obj = new XMLHttpRequest();
+    obj.open("GET", "sample1.json");
+    obj.send();
+    obj.onload = function () {
+        let response = JSON.parse(obj.responseText);
+        //alert(response.DOE);
+        document.getElementById("abc").innerHTML = "Year of Establishment : " + response.DOE;
+    };
+</script>
+
+</html>

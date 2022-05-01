@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Exercise 10</title>
+    </head>
+    <body>
+        Enter Number :
+        <input type="text" name="num" id="num">
+        <button name="go" id="go" onclick="checkButton()">Go</button>
+        <br>
+        <p id="result"></p>
+        <script>
+            function checkButton() {
+            var num = parseInt(document.getElementById("num").value);
+            var i = 1;
+            var result = '';    
+            for (i = 1; i < 11; i++){
+                result += "<p>" +num + "X" + i + "=" + (num * i) + "</p>";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+        </script>
+    </body>
+</html>
